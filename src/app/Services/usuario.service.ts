@@ -15,7 +15,7 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) { }
 
-  iniciarSesion(login:Login):Observable<ResponseApi>{
+  loginUser(login:Login):Observable<ResponseApi>{
     return this.http.post<ResponseApi>(`${this.url}IniciarSesion`, login)
   }
 
